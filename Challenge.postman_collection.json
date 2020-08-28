@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "8041c9f1-a708-4cbc-95c6-e568f432066b",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"id\": \"acba5216-64f0-4671-9d34-6cf06c10c896\"\r\n    },\r\n    \"name\": \"Listing 2\",\r\n    \"description\": \"Description listing 2\",\r\n    \"adults\": 3,\r\n    \"children\": 1,\r\n    \"isPetsAllowed\": false,\r\n    \"basePrice\": 180.0,\r\n    \"cleaningFee\": 72.0,\r\n    \"imageUrl\": \"http://dummyimage.com/126x173.bmp/cc0000/ffffff\",\r\n    \"weeklyDiscount\": 0.30,\r\n    \"monthlyDiscount\": 0.45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing by uuid",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Listing 1 update 2\",\r\n    \"description\": \"Description listing 1\",\r\n    \"adults\": 2,\r\n    \"children\": 1,\r\n    \"isPetsAllowed\": true,\r\n    \"basePrice\": 155.50,\r\n    \"cleaningFee\": 70.0,\r\n    \"imageUrl\": \"http://dummyimage.com/126x173.bmp/cc0000/ffffff\",\r\n    \"weeklyDiscount\": 0.25,\r\n    \"monthlyDiscount\": 0.35\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings/d9ffb35d-0c9b-4e23-b0ce-80ce729e6671",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings",
+						"d9ffb35d-0c9b-4e23-b0ce-80ce729e6671"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Listings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing by uuid",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings/d9ffb35d-0c9b-4e23-b0ce-80ce729e6671",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings",
+						"d9ffb35d-0c9b-4e23-b0ce-80ce729e6671"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing by uuid",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings/d9ffb35d-0c9b-4e23-b0ce-80ce729e6671",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings",
+						"d9ffb35d-0c9b-4e23-b0ce-80ce729e6671"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Special Price",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2020-08-20\",\r\n    \"price\": 95.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings/604c4e4d-34b8-4f01-bc6d-cd055b2cae82/special-prices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings",
+						"604c4e4d-34b8-4f01-bc6d-cd055b2cae82",
+						"special-prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Special Price by uuid",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings/special-prices/51f5f10c-11a1-4877-8c4e-3287b1a20f94",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings",
+						"special-prices",
+						"51f5f10c-11a1-4877-8c4e-3287b1a20f94"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout reservation cost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"checkin\": \"2020-08-27\",\r\n    \"checkout\": \"2020-08-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/challenge/api/listings/604c4e4d-34b8-4f01-bc6d-cd055b2cae82/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"challenge",
+						"api",
+						"listings",
+						"604c4e4d-34b8-4f01-bc6d-cd055b2cae82",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
